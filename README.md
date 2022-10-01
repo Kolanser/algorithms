@@ -1,2 +1,1 @@
-# algorithms
-algorithms and data structures
+<details><summary>Toggle me!</summary>Peek a boo!</details>
