@@ -50,25 +50,16 @@ def solution(root):
 
 
 def test():
-    # node9 = Node(9)
-    # node8 = Node(8)
-    # node7 = Node(7)
-    # node6 = Node(6)
-    # node5 = Node(5)
-    # node4 = Node(4, right=node8)
-    # node3 = Node(3, node5)
-    # node2 = Node(2, right=node4)
-    # node1 = Node(1, node3)
-    # node0 = Node(0, node1, node2)
-    # print(solution(node4))
-    node12 = Node(12)
-    node11 = Node(11, right=node12)
-    node1 = Node(1)
-    node2 = Node(-5)
-    node3 = Node(3, node1, node2)
-    node4 = Node(10, right=node11)
-    node5 = Node(2, node3, node4)
-    print(solution(node5))
+    node6 = Node(12)
+    node5 = Node(11, None, node6)
+    node4 = Node(5)
+    node3 = Node(1)
+    node2 = Node(10, None, node5)
+    node1 = Node(3, node3, node4)
+    node0 = Node(9, node1, node2)
+    assert not solution(node0)
+    node5.right = None
+    assert solution(node5)
 
 
 if __name__ == '__main__':
